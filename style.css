@@ -1,0 +1,43 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* evita que a tela role horizontalmente */
+  touch-action: none; /* melhora a resposta do toque */
+  font-family: sans-serif;
+}
+
+/* Personagem */
+#personagem {
+  position: absolute;
+  left: 50px; /* posição inicial */
+  top: 300px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  transition: left 0.05s; /* suaviza o movimento */
+}
+
+/* Controles do celular */
+#controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+#controls button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
